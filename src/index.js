@@ -4,9 +4,23 @@ const baseStyles = {
   'contain-intrinsic-size': 'var(--tw-intrinsic-size)',
 }
 
-const containIntrinsicSize = plugin(
-  function ({ addComponents, matchComponents, theme, variants, separator, e }) {
+const contentVisibility = plugin(
+  function ({ addComponents, matchComponents, addUtilities, theme, variants, separator, e }) {
     const values = theme('intrinsicSize')
+
+    const contentVisibilityUtilities = {
+      '.visibility-auto': {
+        'content-visibility': 'auto'
+      }
+      '.visibility-hidden': {
+        'content-visibility': 'hidden'
+      },
+      '.visibility-visible': {
+        'content-visibility': 'visible'
+      }
+    }
+
+    addUtilities(contentVisibilityUtilities, { variants: ['responsive'] })
 
     if (matchComponents) {
       if (matchComponents) {
