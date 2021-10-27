@@ -1,0 +1,33 @@
+{
+  "name": "tailwindcss-content-visibility",
+  "version": "0.0.1",
+  "description": "A tailwind plugin for content-visibility &amp; contain-intrinsic-size",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fbosch/tailwindcss-content-visibility.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fbosch/tailwindcss-content-visibility/issues"
+  },
+  "homepage": "https://github.com/fbosch/tailwindcss-content-visibility#readme",
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=2.0.0 || >=3.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "clean-css": "^5.2.2",
+    "jest": "^27.3.1",
+    "tailwindcss": "^3.0.0-alpha.1"
+  }
+}
