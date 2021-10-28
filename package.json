@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-content-visibility",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A tailwind plugin for content-visibility &amp; contain-intrinsic-size",
   "main": "src/index.js",
   "scripts": {
