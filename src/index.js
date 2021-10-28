@@ -18,8 +18,8 @@ const contentVisibility = plugin(function ({
   variants,
   e,
 }) {
-  const heightValues = theme('height')
-  const widthValues = theme('width')
+  const { auto: _excludeAutoHeight, ...heightValues } = theme('height')
+  const { auto: _excludeAutoWidth, ...widthValues } = theme('width')
 
   const contentVisibilityUtilities = {
     '.visibility-auto': {
