@@ -10,6 +10,18 @@ const heightStyles = {
   'contain-intrinsic-height': 'var(--tw-intrinsic-h)',
 }
 
+const contentVisibilityUtilities = {
+  '.visibility-auto': {
+    'content-visibility': 'auto',
+  },
+  '.visibility-hidden': {
+    'content-visibility': 'hidden',
+  },
+  '.visibility-visible': {
+    'content-visibility': 'visible',
+  },
+}
+
 const contentVisibility = plugin(function ({
   addComponents,
   matchComponents,
@@ -20,18 +32,6 @@ const contentVisibility = plugin(function ({
 }) {
   const { auto: _excludeAutoHeight, ...heightValues } = theme('height')
   const { auto: _excludeAutoWidth, ...widthValues } = theme('width')
-
-  const contentVisibilityUtilities = {
-    '.visibility-auto': {
-      'content-visibility': 'auto',
-    },
-    '.visibility-hidden': {
-      'content-visibility': 'hidden',
-    },
-    '.visibility-visible': {
-      'content-visibility': 'visible',
-    },
-  }
 
   addUtilities(contentVisibilityUtilities, { variants: ['responsive'] })
 
