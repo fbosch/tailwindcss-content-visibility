@@ -24,7 +24,7 @@ const contentVisibilityUtilities = {
 
 const contentVisibility = plugin(function ({
   addComponents,
-  matchComponents,
+  matchUtilities,
   addUtilities,
   theme,
   variants,
@@ -35,8 +35,8 @@ const contentVisibility = plugin(function ({
 
   addUtilities(contentVisibilityUtilities, { variants: ['responsive'] })
 
-  if (matchComponents) {
-    matchComponents(
+  if (matchUtilities) {
+    matchUtilities(
       {
         'intrinsic-size': (value) => [
           {
@@ -55,7 +55,7 @@ const contentVisibility = plugin(function ({
       },
       { values: widthValues, variants: ['responsive'] }
     )
-    matchComponents(
+    matchUtilities(
       {
         'intrinsic-h': (value) => [
           {
@@ -66,8 +66,6 @@ const contentVisibility = plugin(function ({
       },
       { values: heightValues, variants: ['responsive'] }
     )
-
-    return
   }
 
   const sizeSelectors = Object.entries(widthValues)
@@ -82,7 +80,7 @@ const contentVisibility = plugin(function ({
     .map(([key, value]) => `.${e(`intrinsic-h-${key}`)}`)
     .join(',\n')
 
-  addComponents(
+  addUtilities(
     [
       {
         [sizeSelectors]: sizeStyles,
